@@ -32,12 +32,12 @@ function checkAndAddButtons() {
   const profileHeader = document.querySelector('[data-testid="UserName"]');
   
   if (profileHeader && !buttonsAdded) {
-    console.log("找到賬戶資料區，添加按鈕和備註");
+    console.log("找到帳戶資料區，添加按鈕和備註");
     addButtons(profileHeader);
     buttonsAdded = true; // 設置標誌為 true
     stopChecking(); // 添加按鈕後停止檢查
   } else if (!profileHeader) {
-    console.log("未找到賬戶資料區");
+    console.log("未找到帳戶資料區");
     buttonsAdded = false; // 重置標誌
   }
 }
@@ -53,8 +53,8 @@ function addButtons(profileHeader) {
   buttonContainer.className = 'account-button-container';
   buttonContainer.style.cssText = 'margin-top: 10px; display: flex;';
 
-  const tagButton = createButton('添加標籤', openTagPopup);
-  const noteButton = createButton('添加備註', openNotePopup);
+  const tagButton = createButton('新增標籤', openTagPopup);
+  const noteButton = createButton('新增備註', openNotePopup);
   noteButton.classList.add('add-note-button');
 
   buttonContainer.appendChild(tagButton);
@@ -181,7 +181,7 @@ function showNoteDialog(userId, username) {
     
     dialog.innerHTML = `
       <form method="dialog">
-        <h2>添加/修改備註 - @${username}</h2>
+        <h2>新增/修改備註 - @${username}</h2>
         <textarea id="noteText" rows="6" cols="50">${existingNote}</textarea>
         <br>
         <button type="submit">保存</button>

@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "Twitter 賬戶備註擴充程式",
+    "name": "Twitter 帳戶備註擴充程式",
     "version": "1.0.6",
-    "description": "為 Twitter 賬戶添加個人備註",
+    "description": "為 Twitter 帳戶添加個人備註",
     "permissions": [
         "storage",
         "activeTab"
